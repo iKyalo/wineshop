@@ -59,6 +59,7 @@
               style="margin: 5px"
               class="btn btn-primary"
               type="button"
+              :disabled="qtty.bottle === 0 && qtty.case === 0"
               @click="addToCart(product, qtty)"
             >
               Add To Cart

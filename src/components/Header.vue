@@ -114,11 +114,22 @@
       >
     </b-row>
 
-    <b-modal id="modal-1" title="Cart">
-      <p v-for="i in cartItems" :key="i.id">
-        <code>{{ i }}</code>
-        <!-- {{ i.item.qtty.bottle }} Bottles @ KSH{{ i.item.item.cost.bottle }} -->
-      </p>
+    <b-modal id="modal-1" :title="'Cart ' + 'Total: Ksh' + total">
+      <div v-for="i in cartItems" :key="i.id">
+        <!-- <code>{{ i.item.name }}</code> -->
+        <p v-if="i.item.qtty.bottle > 0">
+          {{ i.item.qtty.bottle }} {{ i.item.name }} Bottles @ KSH{{
+            i.item.cost.bottle
+          }}
+          = KSH{{ i.item.qtty.bottle * i.item.cost.bottle }}
+        </p>
+        <p v-if="i.item.qtty.case > 0">
+          {{ i.item.qtty.case }} {{ i.item.name }} Cases @ KSH{{
+            i.item.cost.case
+          }}
+          = KSH{{ i.item.qtty.case * i.item.cost.case }}
+        </p>
+      </div>
       <b-button class="mt-3 mr-3">Checkout</b-button>
       <b-button class="mt-3" @click="emptyCart">Empty Cart</b-button>
     </b-modal>
