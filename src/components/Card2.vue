@@ -5,7 +5,7 @@
         <!-- <img src="/img/reisling.png" height="250px" /> -->
         <img
           :src="
-            'https://storage.googleapis.com/wineshop-assets/wine-bottles/img/' +
+            'https://storage.googleapis.com/wineshop-assets/wine-bottles/' +
               product.image
           "
           height="250px"
