@@ -50,7 +50,8 @@
               style="margin: 5px"
               class="btn btn-secondary"
               type="button"
-              @click="showDetails('/img/reisling.png', product.details)"
+              @click="showDetails('https://storage.googleapis.com/wineshop-assets/wine-bottles/' +
+              product.image, product.details)"
             >
               Details
             </button>
