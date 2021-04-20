@@ -18,7 +18,7 @@
 <script>
 // const axios = require("axios").default;
 import { mapGetters, mapActions } from "vuex";
-import ProductCard from "./Card2.vue";
+import ProductCard from "./Card.vue";
 
 export default {
   name: "Products",
