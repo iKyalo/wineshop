@@ -4,7 +4,7 @@
       <b-col class="mb-2" cols="12" md="4" order="3">
         <div>
           <b-button v-b-modal.modal-1
-            >Open Cart ({{ cartItems.length }})</b-button
+            >Open Cart</b-button
           >
           <span style="margin-right: 10px"></span>
           <b-button class="mr-1" v-b-modal.modal-2>Delivery Info</b-button>
