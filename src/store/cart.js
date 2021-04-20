@@ -19,8 +19,8 @@ const actions = {
   //asynchronous
   async fetchProducts({ commit }) {
     const response = await axios.get(
-      // "https://storage.googleapis.com/wineshop-assets/wine-shop.json"
-      "/data/wine-shop.json"
+      "https://storage.googleapis.com/wineshop-assets/wine-shop.json"
+//       "/data/wine-shop.json"
     );
     // console.log(response.data);
     commit("SET_PRODUCTS", response.data);
